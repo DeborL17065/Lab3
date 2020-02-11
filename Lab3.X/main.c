@@ -85,9 +85,9 @@ void Contador(void){
 void init(void) { 
     TRISA =0b00000011; // los primeros 2 bits como entradas
     TRISD =0b00000000; //se define el puerto D como salidas
-    TRISCbits.TRISC6 =0;
-    TRISCbits.TRISC7 =1;
-    PORTC =0;
+    TRISCbits.TRISC6 =0; //Tx como salida
+    TRISCbits.TRISC7 =1; //Rx como entrada
+    PORTC =0;            //se limpia el puerto C
     PORTD =0;          //se limpia el puerto D
     PORTA =0;          //se limpia el puerto A
     ANSELH =0;
