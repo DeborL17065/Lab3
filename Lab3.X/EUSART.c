@@ -44,7 +44,7 @@ void _RX_TX (void){
 void SerialSendString(unsigned char *txbuffer){
     unsigned int l = strlen(txbuffer);
     for (unsigned int i=0;i<l;i++){
-        TXREG =*txbuffer++;
+        TXREG =*txbuffer++; //SE ENVIA CARACTER POR CARACTER
         while(!TXSTAbits.TRMT);
     
     }
